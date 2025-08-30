@@ -1,0 +1,363 @@
+#mainsettings{
+    margin-left: 15vw;
+    color: white;
+    display: flex;
+    width: 85vw;
+    flex-direction: column;
+    align-items: center;
+}
+#mainsettings h1{
+    margin: 1rem;
+}
+/* change profile picture css */
+.profile-picture-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content:space-between;
+  border: 1px solid #2C333F; /* richblack-700 */
+  background-color: #161D29; /* richblack-800 */
+  color: #F1F2FF; /* richblack-5 */
+  border-radius: 8px;
+  padding: 1rem 2rem;
+}
+
+.profile-picture-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-picture-img {
+  width: 78px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-picture-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-picture-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.select-btn {
+  cursor: pointer;
+  background-color: #2C333F; /* richblack-700 */
+  padding: 8px 20px;
+  font-weight: 600;
+  color: #F1F2FF; /* richblack-5 */
+  border-radius: 6px;
+  border: none;
+}
+
+.select-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.uploadicon {
+  font-size: 20px;
+  color: #000814; /* richblack-900 */
+}
+/* delete account css */
+/* DeleteAccount.css */
+
+/* Layout */
+.delete-account {
+  margin: 2.5rem 0;                 /* my-10 */
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;                     /* gap-x-5 */
+  border-radius: 0.375rem;          /* rounded-md */
+  border: 1px solid #691432;        /* border-pink-700 -> #691432 */
+  background-color: #340019;        /* bg-pink-900 -> #340019 */
+  padding: 2rem 3rem;               /* p-8 px-12 */
+  align-items: flex-start;
+}
+
+/* Icon */
+.delete-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;                    /* w-14 */
+  height: 3.5rem;                   /* h-14 */
+  border-radius: 9999px;            /* rounded-full */
+  background-color: #691432;        /* bg-pink-700 -> #691432 */
+  flex-shrink: 0;
+}
+
+.delete-icon {
+  font-size: 1.875rem;              /* text-3xl */
+  color: #EF476F;                   /* text-pink-200 -> #EF476F */
+}
+
+/* Content */
+.delete-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;                      /* space-y-2 */
+}
+
+.delete-title {
+  font-size: 1.125rem;              /* text-lg */
+  font-weight: 600;
+  color: #F1F2FF;                   /* text-richblack-5 -> #F1F2FF */
+  margin: 0;
+}
+
+/* Description */
+.delete-desc {
+  width: 60%;                       /* w-3/5 */
+  color: #FBC7D1;                   /* text-pink-25 -> #FBC7D1 */
+  line-height: 1.4;
+}
+
+/* Button */
+.delete-action {
+  width: fit-content;
+  cursor: pointer;
+  font-style: italic;
+  color: #D43D63;                   /* text-pink-300 -> #D43D63 */
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .delete-account {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-desc {
+    width: 100%;
+  }
+}
+
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem; /* w-14 */
+  height: 3.5rem; /* h-14 */
+  background-color: #691432; /* bg-pink-700 */
+  border-radius: 9999px; /* rounded-full */
+}
+
+.icon {
+  font-size: 1.875rem; /* text-3xl */
+  color: #FBC7D1; /* text-pink-200 */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: #F1F2FF; /* text-richblack-5 */
+}
+
+/* .text {
+  width: 60%; 
+  color: #FBC7D1; 
+} */
+
+.deleteButton {
+  width: fit-content;
+  cursor: pointer;
+  font-style: italic;
+  color: #D43D63; /* text-pink-300 */
+  background: none;
+  border: none;
+}
+/* edit profile css */
+.edit-profile-form {
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-section {
+  background-color: #161D29; /* richblack-800 */
+  border: 1px solid #2C333F; /* richblack-700 */
+  padding: 2rem 3rem;
+  border-radius: 0.375rem;
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+.profile-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .profile-row {
+    flex-direction: row;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label-style {
+  color: #F1F2FF; /* richblack-5 */
+  font-weight: 500;
+}
+
+.forminput {
+  background-color: #2b2b2b; /* richblack-900 */
+  color: #F1F2FF; /* richblack-5 */
+  border: 1px solid #2C333F; /* richblack-700 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.error-text {
+  color: #FFD60A; /* yellow-50 */
+  font-size: 12px;
+  margin-top: -0.25rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancel-btn {
+  background-color: #2C333F; /* richblack-700 */
+  color: #C5C7D4; /* richblack-50 */
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* update pass css */
+.update-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.update-password-container {
+  margin: 2.5rem 0;
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid #2c2c2c;
+  background-color: #161D29;
+  border-radius: 8px;
+  padding: 2rem 3rem;
+}
+
+.update-password-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f9f9f9;
+}
+
+.update-password-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .update-password-row {
+    flex-direction: row;
+  }
+}
+
+.update-password-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label-style {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+}
+
+.form-style {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  top: 42px;
+  cursor: pointer;
+}
+
+.error-text {
+  font-size: 0.75rem;
+  color: #f5d76e;
+  margin-top: -4px;
+}
+
+.update-password-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #444;
+}

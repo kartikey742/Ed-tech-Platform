@@ -1,0 +1,366 @@
+#nav{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0A0E1A;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    justify-content: space-around;
+    border-bottom: white solid 0.1px;
+    z-index: 100;
+  
+}
+#nav #indiv {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* font-size: large; */
+    /* font-weight: bold; */
+    text-decoration: none;
+}
+
+#link div
+{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+/* Wrapper for hover */
+.linkwrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hidden by default */
+.dropdownbox {
+  overflow: auto;     /* if it has long content */
+visibility: hidden;
+/* display: none; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+  /* color: black; */
+ 
+  border: 2px solid black;
+  border-radius: 8px;
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+  z-index: 999;
+  min-width: 120px;
+  
+}
+#cat{
+  color: black;
+width: 10rem;
+  /* margin: 1rem 0; */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+#cat:hover{
+background-color: grey;
+color: white;
+}
+/* Error.css */
+.error-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* white */
+  font-size: 1.875rem; /* text-3xl = 30px */
+  min-height: 100vh; /* full viewport height */
+  background-color: #161D29; /* optional richblack-800 background */
+}
+
+
+/* Show when hovering over the wrapper */
+.linkwrapper:hover .dropdownbox {
+ visibility: visible;
+}
+
+#link .linkcontent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+/* icon button css */
+/* IconBtn.css */
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* spacing between icon and text */
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Filled button style */
+.icon-btn-filled {
+  background-color: #facc15; /* Tailwind yellow-400 equivalent */
+  color: #1f2937; /* Tailwind gray-800 */
+}
+
+.icon-btn-filled:hover {
+  background-color: #eab308; /* yellow-500 */
+}
+
+/* Outline button style */
+.icon-btn-outline {
+  background-color: transparent;
+  border: 2px solid #facc15;
+  color: #facc15;
+}
+
+.icon-btn-outline:hover {
+  background-color: #facc15;
+  color: #1f2937;
+}
+
+/* Disabled state */
+.icon-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Text inside button */
+.icon-btn-text {
+  display: inline-block;
+}
+
+
+/* modalButton css */
+/* ConfirmationModal.css */
+
+.confirmation-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  margin-top: 0 !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.confirmation-modal-container {
+  width: 91.666667%; /* equivalent to w-11/12 */
+  max-width: 350px;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563; /* Tailwind richblack-400 */
+  background-color: #1e293b; /* Tailwind richblack-800 */
+  padding: 1.5rem;
+}
+
+.confirmation-modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8fafc; /* Tailwind richblack-5 */
+}
+
+.confirmation-modal-subtitle {
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5rem;
+  color: #cbd5e1; /* Tailwind richblack-200 */
+}
+
+.confirmation-modal-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.confirmation-modal-secondary-btn {
+  cursor: pointer;
+  border-radius: 0.375rem;
+  background-color: #cbd5e1; /* Tailwind richblack-200 */
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  color: #0f172a; /* Tailwind richblack-900 */
+  transition: all 0.3s ease;
+}
+
+.confirmation-modal-secondary-btn:hover {
+  background-color: #e2e8f0; /* lighter hover */
+}
+
+/* rating star css */
+.rating-stars-container {
+  display: flex;
+  gap: 6px; /* space between stars */
+  color: #ffd60a; /* yellow star color */
+  align-items: center;
+}
+
+.rating-stars-container svg {
+  cursor: default; /* prevents pointer cursor */
+}
+
+/* review slider css */
+#mainswiper{
+  padding: 4rem;
+  background-color: #0A0E1A;
+  color: white;
+}
+#slidecard{
+  height: 10rem;
+  padding: 1rem;
+background-color:#161D29;  
+display: flex;
+flex-direction: column;
+gap: 1rem;
+justify-content: center;
+}
+#slidecard img{
+  height: 50px;
+  border-radius: 50%;
+}
+#firstsection{
+  display: flex;
+  gap: 2rem;
+}
+#coursename{
+  color: #4b5563;
+  font-size:medium;
+}
+#rating{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* footer */
+/* Footer.css */
+
+/* Wrapper */
+.footer-container {
+  background-color: #161D29; /* richblack-800 */
+  padding-top: 3.5rem  /* py-14 */
+}
+
+/* Main content wrapper */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  
+  margin: 0 auto;
+  color: #6E727F; /* richblack-400 */
+  line-height: 1.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-bottom: 1px solid #2C333F; /* richblack-700 */
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Left Section */
+.footer-left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-right: 1px solid #2C333F; /* richblack-700 */
+  width: 50%;
+}
+
+.footer-logo img {
+  max-width: 100%;
+}
+
+.footer-heading {
+  color: #F1F2FF; /* richblack-5 */
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer-link {
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  color: #6E727F;
+}
+
+.footer-link:hover {
+  color: #F1F2FF;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+}
+
+/* Right Section */
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+  width: 50%;
+}
+
+.footer-subtitle {
+  color: #F1F2FF;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+  color: #6E727F;
+  font-size: 14px;
+}
+
+.footer-bottom-links {
+  display: flex;
+}
+
+.footer-bottom-links div {
+  padding: 0 0.75rem;
+  border-right: 1px solid #2C333F;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links div:last-child {
+  border-right: none;
+}
+
+.footer-bottom-links div:hover {
+  color: #F1F2FF;
+}

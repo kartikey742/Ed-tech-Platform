@@ -1,0 +1,428 @@
+/* view details sidebar css */
+/* Sidebar Container */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 3.5rem);
+  width: 250px;
+  /* max-width: 350px; */
+  border-right: 1px solid #2C333F; /* richblack-700 */
+  background-color: #161D29; /* richblack-800 */
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid #424854; /* richblack-600 */
+  color: #DBDDEA; /* richblack-25 */
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.sidebar-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-back-btn {
+  height: 35px;
+  width: 35px;
+  background-color: #AFB2BF; /* richblack-100 */
+  color: #2C333F; /* richblack-700 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sidebar-back-btn:hover {
+  transform: scale(0.9);
+}
+
+.sidebar-add-review {
+  margin-left: auto;
+}
+
+.sidebar-course-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-name {
+  font-size: 1rem;
+}
+
+.course-progress {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #585D69; /* richblack-500 */
+}
+
+/* Sections */
+.sidebar-sections {
+  height: calc(100vh - 5rem);
+  overflow-y: auto;
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.sidebar-section {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #F1F2FF; /* richblack-5 */
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+
+
+
+
+.section-arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.arrow-open {
+  transform: rotate(0deg);
+}
+
+.arrow-closed {
+  transform: rotate(180deg);
+}
+
+/* Subsections */
+.subsection-container {
+  transition: height 0.5s ease-in-out;
+}
+
+
+
+.subsection-item:hover {
+  background-color: #000814; /* richblack-900 */
+  color: white;
+}
+
+.active-subsection {
+  background-color: #FFD60A; /* yellow-50 */
+  color: #161D29; /* richblack-800 */
+  font-weight: 600;
+}
+/* view course css */
+
+.viewcourse-container {
+  position: relative;
+  background-color: #000814;
+  display: flex;
+  margin-top: 80.8px;
+  min-height: calc(100vh - 3.5rem);
+  overflow: hidden;
+}
+
+/* Main content area */
+.viewcourse-content {
+  /* position: fixed; */
+  height: calc(100vh - 3.5rem);
+  flex: 1;
+  overflow: auto;
+}
+
+/* Inner wrapper for padding and layout */
+.viewcourse-inner {
+  margin: 1.5rem; /* same as mx-6 in Tailwind (24px) */
+}
+/* review course modal css */
+
+/* Overlay */
+.crm-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  overflow: auto;
+}
+
+/* Modal Container */
+.crm-container {
+  margin: 2.5rem auto;
+  width: 91.666%;
+  max-width: 700px;
+  background-color: #161D29; /* richblack-800 */
+  border: 1px solid #6E727F; /* richblack-400 */
+  border-radius: 0.5rem;
+}
+
+/* Header */
+.crm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C333F; 
+  padding: 1.25rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.crm-header button{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.crm-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+.crm-close-icon {
+  font-size: 1.5rem;
+  color: #2C333F; /* richblack-5 */
+  cursor: pointer;
+stroke-width: 1px;
+}
+
+/* Body */
+.crm-body {
+  padding: 1.5rem;
+}
+
+.crm-user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.crm-user-img {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.crm-user-name {
+  font-weight: 600;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+.crm-user-status {
+  font-size: 0.875rem;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+/* Form */
+.crm-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crm-textarea-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 91.666%;
+  margin-top: 1rem;
+}
+
+.crm-label {
+  font-size: 0.875rem;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+.crm-required {
+  color: #FBC7D1; /* pink-25 */
+}
+
+.crm-textarea {
+  min-height: 130px;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2C333F; /* richblack-700 */
+  color: #F1F2FF; /* richblack-5 */
+  border-radius: 0.375rem;
+  border: 1px solid #6E727F; /* richblack-400 */
+  resize: none;
+}
+
+.crm-error {
+  font-size: 0.75rem;
+  color: #FBC7D1; /* pink-25 */
+  margin-left: 0.5rem;
+}
+
+/* Buttons */
+.crm-btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  width: 91.666%;
+}
+
+.crm-cancel-btn {
+  background-color: #838894; 
+  color: #000814; 
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+/* video details css */
+.vd-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* width: 100%; */
+  height: max-content;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.vd-preview {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.375rem;
+  object-fit: cover;
+  background-color: #161D29;
+}
+
+.vd-player-wrap {
+  position: relative;
+  width: 100%;
+}
+.vdo{
+  width:99%;
+}
+
+.vd-ended-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 24px;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+}
+
+.vd-iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #06D6A0;
+  color: #000814;
+  border: 1px solid #0C6A87;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.vd-iconbtn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.vd-iconbtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.vd-iconbtn--secondary {
+  margin-top: 0.5rem;
+  background-color: #118AB2;
+  color: #ffffff;
+  border: 1px solid #0C6A87;
+}
+
+.vd-nav {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 250px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.vd-nav-btn {
+  appearance: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  background-color: #000814;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.vd-nav-btn:hover {
+  background-color: #161D29;
+  transform: translateY(-1px);
+}
+
+.vd-nav-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.vd-title {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #ffffff;
+}
+
+.vd-desc {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  color: #E2E2E2;
+}
+
+@media (min-width: 640px) {
+  .vd-container { gap: 22px; }
+  .vd-title { font-size: 2rem; line-height: 2.375rem; }
+  .vd-desc { font-size: 1rem; }
+}
+
+@media (min-width: 768px) {
+  .vd-container { gap: 24px; }
+  .vd-title { font-size: 2.25rem; line-height: 2.5rem; }
+  .vd-nav { gap: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .vd-container { gap: 28px; }
+  .vd-title { font-size: 2.5rem; line-height: 2.75rem; }
+}
+
+@media (min-width: 1280px) {
+  .vd-container { gap: 32px; }
+  .vd-title { font-size: 2.75rem; line-height: 3rem; }
+}
