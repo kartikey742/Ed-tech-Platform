@@ -40,6 +40,20 @@ export const ReviewSlider = () => {
         freeMode={true}
         autoplay={{ delay: 2500 }}
         modules={[ FreeMode, Pagination, Autoplay ]}
+           breakpoints={{
+          0: {
+            slidesPerView: 1, // Mobile
+          },
+          640: {
+            slidesPerView: 2, // Small tablets
+          },
+          1024: {
+            slidesPerView: 3, // Tablets & small laptops
+          },
+          1280: {
+            slidesPerView: 4, // Large desktops
+          },
+        }}
       >
         {reviews.map((review) => (
 
@@ -80,7 +94,7 @@ export const ReviewSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-        ))}
+        ))} 
       </Swiper>
     </div>
   );

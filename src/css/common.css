@@ -140,6 +140,64 @@ color: white;
 .icon-btn-text {
   display: inline-block;
 }
+/* Base navbar */
+#nav {
+  padding: 20px;
+  background-color: #0A0E1A;
+  /* position: fixed; */
+  /* width: 100vw; */
+  top: 0;
+  border-bottom: white solid 0.1px;
+  z-index: 100;
+}
+
+/* Links */
+#nav #indiv {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav #indiv {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #0A0E1A;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #2C333F;
+  }
+
+  #nav.active #indiv.show {
+    display: flex;
+  }
+
+  /* Auth buttons in mobile */
+  .auth-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  #CTAButton{
+    padding: 0.5rem;
+  }
+}
 
 
 /* modalButton css */
@@ -243,6 +301,33 @@ justify-content: center;
   align-items: center;
   gap: 5px;
 }
+/* ========== Responsive Swiper Section ========== */
+
+/* Tablet (<=1024px) */
+#firstsection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#slidecard {
+  flex: 1 1 30%; /* about 3 per row on large screens */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #slidecard {
+    flex: 1 1 45%; /* 2 per row */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #slidecard {
+    flex: 1 1 100%; /* 1 per row */
+  }
+}
+
 
 /* footer */
 /* Footer.css */
@@ -363,4 +448,50 @@ justify-content: center;
 
 .footer-bottom-links div:hover {
   color: #F1F2FF;
+}
+/* ========== Responsive Footer ========== */
+
+/* Tablet and smaller screens (<=1024px) */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;          /* take full width on tablet */
+    border-right: none;   /* remove border when stacked */
+    padding: 1rem;           /* reset padding */
+  }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 1.5rem;
+    align-items: flex-start; /* align items to left on small screens */
+  }
+
+  .footer-social {
+    justify-content: flex-start; /* social icons align left */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .footer-bottom-links div {
+    border-right: none; /* remove vertical borders on mobile */
+    padding: 1rem;
+  }
 }

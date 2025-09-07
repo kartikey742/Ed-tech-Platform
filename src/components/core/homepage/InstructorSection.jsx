@@ -10,7 +10,7 @@ export const InstructorSection = () => {
         </div> */}
         <img  id='instructor' src={Instructor}></img>
 
-        <div style={{width:'30%'}} id='instdiv'>
+        <div id='instdiv'>
             <div>
 
         <h1 style={{color:'white'}}>Become an <br></br><HighlightText text={'instructor'}></HighlightText></h1>
