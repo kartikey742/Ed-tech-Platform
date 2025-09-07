@@ -43,7 +43,7 @@ export default function UpdatePassword() {
               type={showOldPassword ? "text" : "password"}
               id="oldPassword"
               placeholder="Enter Current Password"
-              className="form-style"
+              className="formstyle"
               {...register("oldPassword", { required: true })}
             />
             <span
@@ -70,7 +70,7 @@ export default function UpdatePassword() {
               type={showNewPassword ? "text" : "password"}
               id="newPassword"
               placeholder="Enter New Password"
-              className="form-style"
+              className="formstyle"
               {...register("newPassword", { required: true })}
             />
             <span

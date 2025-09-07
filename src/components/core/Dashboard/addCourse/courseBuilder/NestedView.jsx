@@ -55,7 +55,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
           <details key={section._id} open>
             <summary className="section-summary">
               <div className="section-header">
-                <RxDropdownMenu className="icon"  size={40}/>
+                <RxDropdownMenu className="icon-enrol"  size={40}/>
                 <p className="section-title">{section.sectionName}</p>
               </div>
               <div className="section-actions">
@@ -67,7 +67,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                     )
                   }
                 >
-                  <MdEdit className="icon" />
+                  <MdEdit className="icon-enrol" />
                 </button>
                 <button
                   onClick={() =>
@@ -81,10 +81,10 @@ export default function NestedView({ handleChangeEditSectionName }) {
                     })
                   }
                 >
-                 <RiDeleteBin6Line className="icon" />
+                 <RiDeleteBin6Line className="icon-enrol" />
                 </button>
                 <span className="divider">|</span>
-                <AiFillCaretDown className="icon" size={20} />
+                <AiFillCaretDown className="icon-enrol" size={20} />
               </div>
             </summary>
             <div className="subsection-container">
@@ -96,7 +96,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                 >
                 
                   <div className="subsection-info">
-                    <RxDropdownMenu className="icon"  size={20}/>
+                    <RxDropdownMenu className="icon-enrol"  size={20}/>
                     <p className="subsection-title">{data.title}</p>
                   </div>
                   {console.log('data',data)}
@@ -109,7 +109,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                         setEditSubSection({ ...data, sectionId: section._id })
                       }
                     >
-                      <MdEdit className="icon " />
+                      <MdEdit className="icon-enrol " />
                     </button>
                     <button
                     className="act"
@@ -125,7 +125,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                         })
                       }
                     >
-                      <RiDeleteBin6Line className="icon act" />
+                      <RiDeleteBin6Line className="icon-enrol act" />
                     </button>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                 onClick={() => setAddSubsection(section._id)}
                 className="add-lecture-btn"
               >
-                <FaPlus className="icon" color="#facc15"/>
+                <FaPlus className="icon-enrol" color="#facc15"/>
                 <p>Add Lecture</p>
               </button>
             </div>

@@ -34,11 +34,10 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const res = await getFullDetailsOfCourse(courseId,token);
+      if(res?.success === false){
+      return  navigate(-1)
+      }
       setResponse(res);
-      console.log(res);
-      
-      
-      
 
     } catch (error) {
       console.log("Could not fetch Course Details");

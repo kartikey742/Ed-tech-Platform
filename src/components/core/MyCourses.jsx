@@ -13,13 +13,17 @@ export default function MyCourses() {
   const { token } = useSelector((state) => state.auth)
   const navigate = useNavigate()
   const [courses, setCourses] = useState([])
+  const [tableLoading, setTableloading] = useState(false)
 
   useEffect(() => {
+    
     const fetchCourses = async () => {
+      setTableloading(true)
       const result = await fetchInstructorCourses(token)
       if (result) {
         setCourses(result)
       }
+      setTableloading(false) 
     }
     fetchCourses()
   }, [token])
@@ -36,7 +40,7 @@ export default function MyCourses() {
         </IconBtn>
       </div>
 
-      {courses && <Table courses={courses} setCourses={setCourses} />}
+      {courses && <Table courses={courses} setCourses={setCourses} tableLoading={tableLoading} setTableloading={setTableloading}/>}
     </div>
   )
 }

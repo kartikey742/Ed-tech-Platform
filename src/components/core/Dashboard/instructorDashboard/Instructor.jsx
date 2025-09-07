@@ -35,12 +35,13 @@ const totalStudents = instructorData?.reduce((acc, curr) => acc + curr.totalStud
   return (
     <div id='maininstdash'>  
     <br />   
+      {
+        loading?(<div className='spinner'></div>):
+        <>
       <h1>Hi {user.firstName} 👋</h1>
       <h2>Let's start something new</h2>
       <br/>
-      {
-        loading?(<div>Loading....</div>):
-        courses.length>0?(
+        {courses.length>0?(
           <div id='instructorChartDiv'>
             <div id='horizontal'>
             {totalAmount>0 || totalStudents>0?(<InstructorChart courses={instructorData}></InstructorChart>):
@@ -97,7 +98,8 @@ const totalStudents = instructorData?.reduce((acc, curr) => acc + curr.totalStud
             </p>
           </Link>
           </div>
-        )
+        )}
+      </>
       }
     </div>
   )

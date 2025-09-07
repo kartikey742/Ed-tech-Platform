@@ -146,6 +146,7 @@ const login = async (req, res) => {
         message: 'Please fill all the fields'
       });
     }
+  
     const user = await User.findOne({ email }).populate("additionalDetails");
     console.log(user);
     

@@ -308,6 +308,13 @@ export const deleteCourse = async (data, token) => {
 
 // get full details of a course
 export const getFullDetailsOfCourse = async (courseId, token) => {
+  if(!token){
+    toast.error("Kindly Login First")
+    return {
+      success:false,
+      message:"User not logged in"
+    }
+  }
   const toastId = toast.loading("Loading...")
   //   dispatch(setLoading(true));
   let result = null

@@ -1,4 +1,4 @@
-/* Home.css */
+Home.css
 
    .mcontainer {
   text-align: center;
@@ -38,7 +38,7 @@
 }
 
 .description {
-  color: #4b5563; /* richblack-700 */
+  color: #4b5563;
   font-weight: 500;
   font-size: 1rem;
   max-width: 75%;
@@ -93,7 +93,7 @@
 }
 
 .stats-box {
-  background-color: #064e3b; /* Deep green */
+  background-color: #064e3b;
   color: white;
   padding: 10px 16px;
   border-radius: 12px;
@@ -147,7 +147,7 @@
   
 }
 .link-wrapper {
-  margin-top: 2rem;              /* smaller margin */
+  margin-top: 2rem;              
   padding: 0.2rem ;
   margin-left: auto;
   margin-right: auto;
@@ -159,7 +159,7 @@
   transition: all 0.2s;
 }
 html, body {
- overflow-x: hidden;  /* prevent horizontal scroll */
+ overflow-x: hidden;  
   overflow-y: auto;  
     position: relative;
 }
@@ -175,12 +175,12 @@ html, body {
   align-items: center;
   gap: 0.5rem;
   border-radius: 100px;
-  padding: 5px 20px; /* 5px top/bottom, 40px left/right */
+  padding: 5px 20px; 
   transition: all 0.2s;
 }
 
 .link-wrapper:hover .link-inner {
-  background-color: #0A0E1A; /* richblack-900 */
+  background-color: #0A0E1A; 
 }
 #highlight{
   color:#537988;
@@ -335,16 +335,16 @@ box-shadow: 12px 6px 20px rgba(0, 0, 0, 0.3);
 #card h2 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #0f172a; /* richblack-900 */
+  color: #0f172a; 
   margin: 0;
 }
 
-#card p {
+/* #card p {
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  color: #4b5563; /* richblack-600 */
+  color: #4b5563; 
   line-height: 1.4;
-}
+} */
 
 .card-bottom {
   display: flex;
@@ -352,7 +352,7 @@ box-shadow: 12px 6px 20px rgba(0, 0, 0, 0.3);
   align-items: center;
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: #2dd4bf; /* caribbeangreen-700 */
+  color: #2dd4bf;
 }
 
 .card-bottom div {

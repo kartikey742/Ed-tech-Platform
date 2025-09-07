@@ -81,8 +81,6 @@ export function signUp(
     
       
       if (error.response.data.message!=='Invalid OTP'){
-      console.log('pahuch gya');
-      
         navigate("/signup")
       }
     }
@@ -116,9 +114,14 @@ export function login(email, password, navigate) {
       localStorage.setItem("token", JSON.stringify(response.data.token))
       localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard/my-profile")
-    } catch (error) {
+    } catch (error) { 
       console.log("LOGIN API ERROR............", error)
-      toast.error("Login Failed")
+      if(error.response.data.message==='User not found'){
+        toast.error(error.response.data.message || "Login Failed" )
+        navigate("/signup")
+      }
+      else
+      toast.error(error.response.data.message || "Login Failed" )
     }
     dispatch(setLoading(false))
     toast.dismiss(toastId)
