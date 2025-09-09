@@ -27,35 +27,47 @@ export const RenderSteps = () => {
      <div id='notext'>
 
     {
-      steps.map((item,i)=>
-           <div id='noandtext'>
-            <div id='dash'>
+  steps.map((item, i) =>
+    <div id='noandtext' key={item.id}>
+      <div id='dash'>
 
-        <div id='no' style={{backgroundColor:step==item.id?'#3D2A01':'#2C333F',border:step==item.id?'2px solid #FFD60A':'2px solid #424854',color:step==item.id?'#FFD60A':'#999DAA'}}>
-
-            {
-              item.id<step?(<FaCheck/>):(item.id)
-            }
-            
-            </div>
-            <div> 
-
-             {
-               i!=2 && <div style={{color:step==i+1?'white':'grey',fontWeight:step==i+1?'bolder':'light'}}>------------------------</div>
-               
-              }
-              </div>
-            </div>
-         <br />
-           <div id='notext'>
-            {
-              item.title
-            }
-            </div>
-           
+        {/* Circle */}
+        <div
+          id='no'
+          style={{
+            backgroundColor: step == item.id ? '#3D2A01' : '#2C333F',
+            border: step == item.id ? '2px solid #FFD60A' : '2px solid #424854',
+            color: step == item.id ? '#FFD60A' : '#999DAA'
+          }}
+        >
+          {item.id < step ? (<FaCheck />) : (item.id)}
         </div>
-      )
-    }
+
+        {/* Line */}
+        {i != steps.length - 1 && (
+          <div
+            className="step-line"
+            style={{
+             
+              height: '2px',
+              backgroundColor: step > item.id ? '#FFD60A' : '#424854',
+              margin: '0 10px'
+            }}
+          />
+        )}
+      
+      </div>
+
+      <br />
+
+      {/* Title */}
+      <div id='notext'>
+        {item.title}
+      </div>
+    </div>
+  )
+}
+
   
     
   </div>

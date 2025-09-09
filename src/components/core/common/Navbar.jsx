@@ -44,10 +44,7 @@ export const Navbar = () => {
       {/* Logo */}
       <img src={logo} alt="Logo" style={{ height: "40px" }} />
 
-      {/* Hamburger (only visible on mobile) */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FiX size={28} color="white" /> : <FiMenu size={28} color="white" />}
-      </div>
+   
 
       {/* Nav Links */}
       <div id="indiv" className={menuOpen ? "show" : ""}>
@@ -87,6 +84,18 @@ export const Navbar = () => {
             )}
           </div>
         ))}
+        <div id="logsinbtn">
+            {token == null ? (
+          <div className="auth-btns">
+            <CTAButton linkto={"/login"}>Log in</CTAButton>
+            <CTAButton linkto={"/signup"} active={true}>
+              Sign up
+            </CTAButton>
+          </div>
+        ) : (
+          <ProfileDropDown />
+        )}
+        </div>
       </div>
 
       {/* Cart + Auth/Profile */}
@@ -106,7 +115,8 @@ export const Navbar = () => {
             </sup>
           </Link>
         )}
-
+          <div id="logsinbtn2">
+            
         {token == null ? (
           <div className="auth-btns">
             <CTAButton linkto={"/login"}>Log in</CTAButton>
@@ -117,6 +127,11 @@ export const Navbar = () => {
         ) : (
           <ProfileDropDown />
         )}
+        </div>
+      </div>
+         {/* Hamburger (only visible on mobile) */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FiX size={28} color="white" /> : <FiMenu size={28} color="white" />}
       </div>
     </div>
   );

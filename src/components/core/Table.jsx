@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
+// import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { setCourse, setEditCourse } from "../../slices/courseSlice"
 
 

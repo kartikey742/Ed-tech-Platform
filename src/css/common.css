@@ -21,7 +21,9 @@
     /* font-weight: bold; */
     text-decoration: none;
 }
-
+#logsinbtn{
+  display: none;
+}
 #link div
 {
     position: relative;
@@ -165,7 +167,7 @@ color: white;
 }
 
 /* Mobile styles */
-@media (max-width: 1024px) {
+@media (max-width: 500px) {
   .hamburger {
     display: block;
   }
@@ -193,9 +195,16 @@ color: white;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
+   
+  }
+  #logsinbtn2{
+    display: none;
   }
   #CTAButton{
     padding: 0.5rem;
+  }
+  #logsinbtn{
+    display: block;
   }
 }
 
@@ -306,7 +315,6 @@ justify-content: center;
 /* Tablet (<=1024px) */
 #firstsection {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 

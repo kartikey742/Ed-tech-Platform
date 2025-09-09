@@ -24,10 +24,10 @@ export const Home = () => {
             <FaArrowRight />
           </div>
         </div>
-      </Link>
+      </Link> 
       <div id='maintext'>
         Empower Your Future  with
-        <HighlightText text={"Coding Skill"}></HighlightText>
+        <HighlightText text={"Coding Skill"}></HighlightText> 
       </div>
       <div className='text'>
          With our online coding courses, you can learn at your own pace, from

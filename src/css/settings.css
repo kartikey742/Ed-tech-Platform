@@ -9,6 +9,85 @@
 #mainsettings h1{
     margin: 1rem;
 }
+/* edit profile css */
+.edit-profile-form {
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-section {
+  background-color: #161D29; /* richblack-800 */
+  border: 1px solid #2C333F; /* richblack-700 */
+  padding: 2rem 3rem;
+  border-radius: 0.375rem;
+  display: flex;
+  width: 48%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #F1F2FF; /* richblack-5 */
+}
+
+.profile-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .profile-row {
+    flex-direction: row;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label-style {
+  color: #F1F2FF; /* richblack-5 */
+  font-weight: 500;
+}
+
+.forminput {
+  background-color: #2b2b2b; /* richblack-900 */
+  color: #F1F2FF; /* richblack-5 */
+  border: 1px solid #2C333F; /* richblack-700 */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.error-text {
+  color: #FFD60A; /* yellow-50 */
+  font-size: 12px;
+  margin-top: -0.25rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancel-btn {
+  background-color: #2C333F; /* richblack-700 */
+  color: #C5C7D4; /* richblack-50 */
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 /* change profile picture css */
 .profile-picture-container {
   display: flex;
@@ -69,6 +148,7 @@
   font-size: 20px;
   color: #000814; /* richblack-900 */
 }
+
 /* delete account css */
 /* DeleteAccount.css */
 
@@ -189,85 +269,7 @@
   background: none;
   border: none;
 }
-/* edit profile css */
-.edit-profile-form {
-  margin-top: 2.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.profile-section {
-  background-color: #161D29; /* richblack-800 */
-  border: 1px solid #2C333F; /* richblack-700 */
-  padding: 2rem 3rem;
-  border-radius: 0.375rem;
-  display: flex;
-  width: 48%;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.profile-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #F1F2FF; /* richblack-5 */
-}
-
-.profile-row {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-@media (min-width: 1024px) {
-  .profile-row {
-    flex-direction: row;
-  }
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.label-style {
-  color: #F1F2FF; /* richblack-5 */
-  font-weight: 500;
-}
-
-.forminput {
-  background-color: #2b2b2b; /* richblack-900 */
-  color: #F1F2FF; /* richblack-5 */
-  border: 1px solid #2C333F; /* richblack-700 */
-  padding: 0.75rem;
-  border-radius: 0.375rem;
-}
-
-.error-text {
-  color: #FFD60A; /* yellow-50 */
-  font-size: 12px;
-  margin-top: -0.25rem;
-}
-
-.action-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.cancel-btn {
-  background-color: #2C333F; /* richblack-700 */
-  color: #C5C7D4; /* richblack-50 */
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
-  font-weight: 600;
-  cursor: pointer;
-}
 /* update pass css */
 .update-password-form {
   display: flex;
@@ -360,4 +362,17 @@
 
 .cancel-btn:hover {
   background-color: #444;
+}
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  .profile-picture-container {
+    width: 90%;
+  }
+  .profile-section{
+    width: 90%;
+  }
+
+    .update-password-container {
+    width: 90%;
+  }
 }

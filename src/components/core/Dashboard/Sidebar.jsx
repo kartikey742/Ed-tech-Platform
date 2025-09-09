@@ -16,7 +16,7 @@ const{user,loading:profileLoading}=useSelector((state)=>state.profile)
 const [confirmationModal,setConfirmationModal]=useState(null)
     if(authLoading || profileLoading){
         return (
-            <div>Loading....</div>
+            <div className='spinner'></div>
         )
     }
     else{
@@ -29,9 +29,9 @@ const [confirmationModal,setConfirmationModal]=useState(null)
             })}
             
             <div id='liner'></div>
-            <div>
+            
                 <SidebarLink link={{name:'Settings',path:'/dashboard/settings'}} iconName={'VscSettingsGear'}/>
-            </div>
+            
             <br></br>
             <div>
             <button id='logoutbtn' onClick={()=>setConfirmationModal({
